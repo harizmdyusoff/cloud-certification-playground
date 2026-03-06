@@ -1,0 +1,122 @@
+[
+  {
+    "id": "azure-ai-engineer-associate",
+    "createdAt": "2024-06-01T00:00:00Z",
+    "name": "Microsoft Certified: Azure AI Engineer Associate",
+    "description": "Design and implement Azure AI solutions using Azure AI services, Azure AI Search, and Azure OpenAI.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "vendor": "Azure",
+    "level": "Associate",
+    "role": "AI Engineer",
+    "subject": "Artificial intelligence",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer/"
+  },
+  {
+    "id": "azure-administrator-associate",
+    "createdAt": "2024-06-01T00:00:00Z",
+    "name": "Microsoft Certified: Azure Administrator Associate",
+    "description": "Implement, manage, and monitor identity, governance, storage, compute, and virtual networks in Azure.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "vendor": "Azure",
+    "level": "Associate",
+    "role": "Administrator",
+    "subject": "Cloud infrastructure",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/"
+  },
+  {
+    "id": "azure-developer-associate",
+    "createdAt": "2024-06-01T00:00:00Z",
+    "name": "Microsoft Certified: Azure Developer Associate",
+    "description": "Design, build, test, and maintain cloud applications and services on Azure.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "vendor": "Azure",
+    "level": "Associate",
+    "role": "Developer",
+    "subject": "Cloud development",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/"
+  },
+  {
+    "id": "azure-security-engineer-associate",
+    "createdAt": "2024-06-01T00:00:00Z",
+    "name": "Microsoft Certified: Azure Security Engineer Associate",
+    "description": "Implement security controls and threat protection, and manage identity and access in Azure environments.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "vendor": "Azure",
+    "level": "Associate",
+    "role": "Security Engineer",
+    "subject": "Cloud security",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/azure-security-engineer/"
+  },
+  {
+    "id": "azure-data-engineer-associate",
+    "createdAt": "2024-06-01T00:00:00Z",
+    "name": "Microsoft Certified: Azure Data Engineer Associate",
+    "description": "Design and implement data storage, processing, and monitoring solutions on Azure.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+    "vendor": "Azure",
+    "level": "Associate",
+    "role": "Data Engineer",
+    "subject": "Data engineering",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/azure-data-engineer/"
+  },
+  {
+    "id": "azure-solutions-architect-expert",
+    "createdAt": "2024-06-01T00:00:00Z",
+    "name": "Microsoft Certified: Azure Solutions Architect Expert",
+    "description": "Design scalable, secure, and reliable cloud and hybrid solutions on Azure.",
+    "badgeUrl": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg",
+    "vendor": "Azure",
+    "level": "Expert",
+    "role": "Solutions Architect",
+    "subject": "Solution architecture",
+    "externalLink": "https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/"
+  },
+  {
+    "id": "aws-cloud-practitioner",
+    "createdAt": "2024-06-01T00:00:00Z",
+    "name": "AWS Certified Cloud Practitioner",
+    "description": "Validate foundational understanding of AWS Cloud concepts, services, security, and pricing.",
+    "badgeUrl": "https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.png",
+    "vendor": "AWS",
+    "level": "Foundational",
+    "role": "Cloud Practitioner",
+    "subject": "Cloud fundamentals",
+    "externalLink": "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+  },
+  {
+    "id": "aws-solutions-architect-associate",
+    "createdAt": "2024-06-01T00:00:00Z",
+    "name": "AWS Certified Solutions Architect – Associate",
+    "description": "Design cost-optimized, resilient, and high-performing architectures on AWS.",
+    "badgeUrl": "https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Associate_badge.png",
+    "vendor": "AWS",
+    "level": "Associate",
+    "role": "Solutions Architect",
+    "subject": "Cloud architecture",
+    "externalLink": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+  },
+  {
+    "id": "aws-developer-associate",
+    "createdAt": "2024-06-01T00:00:00Z",
+    "name": "AWS Certified Developer – Associate",
+    "description": "Develop, deploy, and debug cloud-based applications using core AWS services.",
+    "badgeUrl": "https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Developer-Associate_badge.png",
+    "vendor": "AWS",
+    "level": "Associate",
+    "role": "Developer",
+    "subject": "Cloud development",
+    "externalLink": "https://aws.amazon.com/certification/certified-developer-associate/"
+  },
+  {
+    "id": "aws-security-specialty",
+    "createdAt": "2024-06-01T00:00:00Z",
+    "name": "AWS Certified Data Engineer – Associate",
+    "description": "Design, build, and maintain data pipelines and data solutions using AWS services.",
+    "badgeUrl": "https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Data-Engineer-Associate_badge.png",
+    "vendor": "AWS",
+    "level": "Associate",
+    "role": "Data Engineer",
+    "subject": "Data engineering",
+    "externalLink": "https://aws.amazon.com/certification/certified-data-engineer-associate/"
+  }
+]
