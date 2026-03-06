@@ -11,5 +11,9 @@ export const Route = createFileRoute('/users')({
 
 function RouteComponent() {
   const users = Route.useLoaderData() || []
-  return <div><UsersList users={users} /></div>
+  return (
+    <div>
+      <UsersList users={users} />
+    </div>
+  )
 }

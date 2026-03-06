@@ -6,7 +6,7 @@ const useStyles = makeStyles({
     cursor: 'pointer',
     '&:hover': {
       color: tokens.colorBrandBackground,
-    }
+    },
   },
 })
 
@@ -19,9 +19,11 @@ export function BackNav() {
       className={styles.backNav}
       onClick={() =>
         navigate({
-          to: '/'
+          to: '/',
         })
-      }>{icon}
+      }
+    >
+      {icon}
     </span>
   )
 }

@@ -40,7 +40,7 @@ export const Route = createRootRoute({
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Silkscreen:wght@400&display=swap',
-      }
+      },
     ],
   }),
   shellComponent: RootDocument,
@@ -64,21 +64,19 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-          <FluentProvider theme={customTheme}>
-            {children}
-          </FluentProvider>
-          <TanStackDevtools
-            config={{
-              position: 'bottom-right',
-            }}
-            plugins={[
-              {
-                name: 'Tanstack Router',
-                render: <TanStackRouterDevtoolsPanel />,
-              },
-            ]}
-          />
-          <Scripts />
+        <FluentProvider theme={customTheme}>{children}</FluentProvider>
+        <TanStackDevtools
+          config={{
+            position: 'bottom-right',
+          }}
+          plugins={[
+            {
+              name: 'Tanstack Router',
+              render: <TanStackRouterDevtoolsPanel />,
+            },
+          ]}
+        />
+        <Scripts />
       </body>
     </html>
   )

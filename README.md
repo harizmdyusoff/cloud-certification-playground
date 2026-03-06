@@ -1,4 +1,4 @@
-Welcome to TanStack and Fluent UI 
+Welcome to TanStack and Fluent UI
 
 # Getting Started
 

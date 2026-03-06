@@ -1,5 +1,10 @@
 import { getCertificates } from '@/serverActions/certificatesActions'
-import { Body1, makeStyles, Subtitle2Stronger, Title2 } from '@fluentui/react-components'
+import {
+  Body1,
+  makeStyles,
+  Subtitle2Stronger,
+  Title2,
+} from '@fluentui/react-components'
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
 
 // TODO: Redundant with the one in the CertificatesList.tsx, move to a shared file
@@ -32,14 +37,14 @@ const useStyles = makeStyles({
     gap: '8px',
     padding: '12px',
     cursor: 'pointer',
-    border: "4px solid",
-    ":hover": {
-      backgroundColor: "#FF5640",
+    border: '4px solid',
+    ':hover': {
+      backgroundColor: '#FF5640',
     },
   },
   cardTitle: {
-    fontWeight: "bold",
-    marginBottom: "8px",
+    fontWeight: 'bold',
+    marginBottom: '8px',
   },
 })
 
@@ -47,27 +52,37 @@ export const Route = createFileRoute('/')({
   loader: async () => {
     return getCertificates()
   },
-  component: App
+  component: App,
 })
 
 function App() {
   const styles = useStyles()
   const navigate = useNavigate()
   const routes = [
-    { name: 'certificates', path: '/certificates', title: 'certificates', description: 'Created by Reading & Writing a File' },
-    { name: 'Users', path: '/users', title: 'Users', description: 'Created by Fetching Users from API' },
+    {
+      name: 'certificates',
+      path: '/certificates',
+      title: 'certificates',
+      description: 'Created by Reading from a File',
+    },
+    {
+      name: 'Users',
+      path: '/users',
+      title: 'Users',
+      description: 'Created by Fetching Users from Github GIST',
+    },
   ]
 
   return (
     <div className={styles.mainContainer}>
       <div className={styles.container}>
         <Title2>TanStack with FluentUI</Title2>
-        {routes.map(route => (
+        {routes.map((route) => (
           <div
             className={styles.routesCardContainer}
             onClick={() =>
               navigate({
-                to: route.path
+                to: route.path,
               })
             }
           >

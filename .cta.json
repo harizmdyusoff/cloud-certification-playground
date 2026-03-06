@@ -10,8 +10,5 @@
   "routerOnly": false,
   "version": 1,
   "framework": "react-cra",
-  "chosenAddOns": [
-    "eslint",
-    "netlify"
-  ]
+  "chosenAddOns": ["eslint", "netlify"]
 }

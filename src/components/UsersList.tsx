@@ -32,13 +32,13 @@ const useStyles = makeStyles({
     flexDirection: 'column',
   },
   memberCardContainer: {
-    display: "grid",
-    gridTemplateColumns: "repeat(2, 1fr)",
-    gap: "20px",
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2, 1fr)',
+    gap: '20px',
   },
   memberCard: {
-    border: "4px solid",
-    padding: "16px",
+    border: '4px solid',
+    padding: '16px',
   },
 })
 
@@ -50,16 +50,21 @@ export function UsersList({ users }: UsersListProps) {
     return <p>No users available.</p>
   }
 
-  const [ status, setStatus ] = useState("offline")
-  
+  const [status, setStatus] = useState('offline')
+
   return (
     <div className={styles.container}>
-        <div className={styles.memberCardHeader}>
-          <Title2><BackNav /> Users Collection</Title2>
-          <Label>This page implements user collection by fetching users from an API (JSON).</Label>
-        </div>
-        <div className={styles.memberCardContainer}>
-          {members.map((member: any) => (
+      <div className={styles.memberCardHeader}>
+        <Title2>
+          <BackNav /> Users Collection
+        </Title2>
+        <Label>
+          This page implements user collection by fetching users from an API
+          (JSON).
+        </Label>
+      </div>
+      <div className={styles.memberCardContainer}>
+        {members.map((member: any) => (
           <Persona
             key={member.name}
             className={styles.memberCard}
@@ -70,9 +75,9 @@ export function UsersList({ users }: UsersListProps) {
             secondaryText={member.name}
             tertiaryText={member.age}
             quaternaryText={member.powers.join(', ')}
-          />))
-          }
-        </div>
+          />
+        ))}
+      </div>
     </div>
   )
 }

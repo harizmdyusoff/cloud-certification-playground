@@ -11,5 +11,9 @@ export const Route = createFileRoute('/certificates')({
 
 function CertificatesComponent() {
   const certificates = Route.useLoaderData() || []
-  return <div><CertificatesList certificates={certificates} /></div>
+  return (
+    <div>
+      <CertificatesList certificates={certificates} />
+    </div>
+  )
 }
