@@ -5,15 +5,13 @@ import {
   makeStyles,
   Subtitle1,
   Subtitle2,
-  Option,
   Title2,
-  useId,
-  tokens,
-  Dropdown,
 } from '@fluentui/react-components'
 import { BackNav } from './BackNav'
 import { useState } from 'react'
 import { Pagination } from './Pagination'
+import { CustomDropdown } from './Dropdown'
+import { useEffect } from 'react'
 
 interface CertificatesListProps {
   certificates: Certificate[]
@@ -67,30 +65,20 @@ const useStyles = makeStyles({
     WebkitBoxOrient: 'vertical',
     overflow: 'hidden',
   },
-  providerCertDropdown: {
-    border: `1px solid ${tokens.colorNeutralStroke1}`,
-    borderRadius: 0,
-    width: 'calc(50% - 10px)',
-    '&:hover': {
-      borderBottomColor: tokens.colorBrandBackgroundHover,
-    },
-    '&:focus-within': {
-      borderBottomColor: tokens.colorBrandBackgroundHover,
-    },
+  certificateCardFilters: {
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
   },
 })
 
 export function CertificatesList({ certificates }: CertificatesListProps) {
   const styles = useStyles()
-  const dropdownId = useId('')
 
-  if (!certificates || certificates.length === 0) {
+  if (certificates.length === 0) {
     return <p>No certificates available.</p>
   }
 
-  // It's generally better to sort in the UI (here) if you want flexibility in presentation.
-  // If you always want certificates sorted from the backend, sort in certificatesActions.
-  // For this component, sorting here is fine:
   const sortedcertificates = [...certificates].sort(
     (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
   )
@@ -98,6 +86,11 @@ export function CertificatesList({ certificates }: CertificatesListProps) {
   const [page, setPage] = useState(1)
   const noItemsPerPage = 6
   const [selectedProvider, setSelectedProvider] = useState('All')
+  const providers = ['All', 'Aws', 'Azure']
+
+  // const [selectedRole, setSelectedRole] = useState('All')
+  // const roles = ['All', 'AI Engineer', 'Administrator', 'Developer', 'Security Engineer', 'Data Engineer', 'Solutions Architect', 'Cloud Practitioner', 'Solutions Architect', 'Developer', 'Data Engineer', 'Network Engineer', 'Database Administrator', 'Virtualization Engineer', 'Developer', 'DevOps Engineer', 'Systems Administrator', 'Solutions Architect', 'DevOps Engineer', 'Machine Learning Engineer', 'AI Practitioner']
+
   const filteredCertificates = sortedcertificates.filter((certificate) => {
     if (selectedProvider === 'All') return true
     return certificate.vendor.toLowerCase() === selectedProvider.toLowerCase()
@@ -107,7 +100,10 @@ export function CertificatesList({ certificates }: CertificatesListProps) {
     (page - 1) * noItemsPerPage,
     page * noItemsPerPage,
   )
-  const providers = ['All', 'Aws', 'Azure']
+
+  useEffect(() => {
+    setPage(1)
+  }, [selectedProvider])
 
   return (
     <div className={styles.container}>
@@ -118,20 +114,10 @@ export function CertificatesList({ certificates }: CertificatesListProps) {
         <Label>List of certificates from Azure and AWS</Label>
       </div>
       <Subtitle1>Browse certificates</Subtitle1>
-      <Dropdown
-        size="large"
-        className={styles.providerCertDropdown}
-        id={dropdownId}
-        placeholder="Select a cloud provider"
-        onOptionSelect={(option: any) => {
-          setSelectedProvider(option.target.textContent)
-        }}
-        value={selectedProvider}
-      >
-        {providers.map((provider) => (
-          <Option key={provider}>{provider}</Option>
-        ))}
-      </Dropdown>
+      <div className={styles.certificateCardFilters}>
+        {CustomDropdown(providers, selectedProvider, setSelectedProvider, 'Select a cloud provider')}
+        {/* {CustomDropdown(roles, selectedRole, setSelectedRole, 'Select a role')} */}
+      </div>
       <div className={styles.certificatesCardContainer}>
         {paginatedcertificates.map((certificate) => (
           <div key={certificate.id} className={styles.certificateCard}>
